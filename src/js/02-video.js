@@ -16,7 +16,7 @@ function onTimeUpdate(data) {
 function getCurrentTimeFromLS() {
   try {
     return JSON.parse(localStorage.getItem(PLAYER_LS_KEY)).seconds;
-  } catch (err) {
-    console.error(err);
+  } catch {
+    return 0;
   }
 }
